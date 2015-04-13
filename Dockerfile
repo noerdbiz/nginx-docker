@@ -28,3 +28,8 @@ RUN apt-get install -y libgcrypt11-dev zlib1g-dev
 # Install NginX
 ADD ./install-nginx.sh /tmp/
 RUN sh /tmp/install-nginx.sh
+
+# Add config
+RUN mkdir /etc/nginx/sites-enabled
+RUN mkdir /etc/nginx/ssl
+RUN mkdir /etc/nginx/error
